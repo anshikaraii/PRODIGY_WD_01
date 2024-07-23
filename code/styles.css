@@ -1,0 +1,247 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #001f3f; /* Navy blue color */
+  color: #ffffff; /* White text for better contrast */
+}
+
+/* Navbar Styling */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #FFE5B4; /* Peach color */
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #000000; /* Black text */
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect Color */
+nav ul li a:hover {
+  color: #FFA500; /* Light orange */
+  transform: scale(1.1);
+}
+
+/* Header Section */
+#header {
+  background-color: #001f3f; /* Navy blue color */
+  text-align: center;
+  padding: 150px 20px 20px; /* Adjusted top padding for more space */
+  height: calc(100vh - 80px); /* Make header full height minus navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#header h1 {
+  color: #ffffff; /* White text */
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+#header p {
+  color: #ffffff; /* White text */
+  font-size: 1.5em;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Content Sections */
+section {
+  padding: 60px 20px;
+  background-color: #001f3f; /* Navy blue background */
+  color: white; /* White text */
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 5px;
+  background: #FFA500; /* Light orange */
+  margin: 10px auto 0;
+}
+
+section p {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* About Section */
+#about img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+#about img:hover {
+  transform: scale(1.05);
+}
+
+/* Services Section */
+.service {
+  margin-bottom: 40px;
+  text-align: center;
+  animation: slideIn 1s ease-in-out;
+}
+
+.service img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* FAQ */
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  color: #000000; /* Black text */
+}
+
+.faq-item h3 {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #001f3f; /* Navy blue background */
+  border-radius: 5px;
+  color: white; /* White text */
+  transition: background-color 0.3s ease;
+}
+
+.faq-item h3:hover {
+  background-color: #FFA500; /* Light orange */
+}
+
+/* Contact Form */
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#contactForm input, #contactForm textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #000000; /* Black text */
+  transition: border-color 0.3s ease;
+}
+
+#contactForm input:focus, #contactForm textarea:focus {
+  border-color: #FFA500;
+}
+
+#contactForm button {
+  padding: 10px;
+  background-color: #001f3f; /* Navy blue background */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white; /* White text */
+  transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+  background-color: #FFA500; /* Light orange */
+  color: #000000; /* Black text */
+}
+
+/* Footer */
+footer {
+  background: #001f3f; /* Navy blue */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer .social-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+  color: #FFA500; /* Light orange */
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  #header h1 {
+    font-size: 2.5em;
+  }
+
+  #header p {
+    font-size: 1.2em;
+  }
+}
